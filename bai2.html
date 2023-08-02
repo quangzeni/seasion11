@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arrInt1 = [];
+        const arrInt2 = [];
+        const arrInt3 = [];
+        const arrInt = [arrInt1, arrInt2, arrInt3];
+        for (let i = 0; i < 3; i++) {
+            arrInt1[i] = +prompt("Nhập giá trị mảng :");
+        }
+        for (let i = 0; i < 3; i++) {
+            arrInt2[i] = +prompt("Nhập giá trị mảng :");
+        }
+        for (let i = 0; i < 3; i++) {
+            arrInt3[i] = +prompt("Nhập giá trị mảng :");
+        }
+        console.log("gia tri mang:", arrInt);
+        console.log("in gia tri duong bien", arrInt[0][0], arrInt[0][1], arrInt[0][2], arrInt[1][0], arrInt[1][2]
+            , arrInt[2][0], arrInt[2][1], arrInt[2][2])
+        console.log("In duong cheo", arrInt[0][0], arrInt[1][1], arrInt[2][2]);
+        console.log("sawp xep tawng dan:", arrInt.sort((a, b) => a - b))
+    </script>
+
+</body>
+
+</html>

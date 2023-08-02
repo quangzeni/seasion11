@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // a,b
+        let arr = [];
+        for (i = 0; i < 5; i++) {
+            arr[i] = +prompt("Nhap gia tri mang");
+        }
+        console.log("gia tri cac phan tu mang: ", arr);
+        // c
+        let sum = 0;
+        for (i = 0; i < 5; i++) {
+            if (arr[i] % 2 == 0) {
+                console.log("so chan", arr[i]);
+                sum += arr[i];
+            }
+
+        }
+        console.log("tong so chan: ", sum);
+        // d
+        let sumLe = 0;
+        for (i = 0; i < 5; i++) {
+            if (arr[i] % 2 != 0) {
+                console.log("so le", arr[i]);
+                sumLe += arr[i];
+            }
+
+        }
+        console.log("tong so chan: ", sumLe);
+        // e
+        for (i = 0; i < 5; i++) {
+            let xemXet = true;
+            if (arr[i] >= 2) {
+                for (j = 2; j < arr[i]; j++) {
+                    if (arr[i] % j == 0) {
+                        xemXet = false;
+                        break;
+                    }
+
+                }
+                if (xemXet) {
+                    console.log(arr[i], "la so nguyen to");
+                }
+            }
+
+        }
+        // f
+        console.log("so lon nhat", Math.max(...arr));
+        console.log("so nho nhat", Math.min(...arr));
+        // g
+        arr.sort((a, b) => b - a);
+        console.log(arr.join(" "));
+        // h
+        let soSanh = +prompt("Nhập vào 1 số để so sánh:");
+        let thongKe = 0;
+        for (let i = 0; i < 5; i++) {
+            if (arr[i] == soSanh) {
+                thongKe++;
+            }
+        }
+        console.log("số phần tử giống", soSanh, " là:", thongKe);
+        //  nếu arr[i] == soSanh; thì let thongKe = 0 ++
+    </script>
+</body>
+
+</html>

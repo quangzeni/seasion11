@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let chuoiNhap = prompt("Nhap Chuoi bat ky:");
+        let chuoiUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        console.log(chuoiUp);
+        let chuoiLow = 'abcdefghijklmnopqrstuvwxyz';
+        let chuoiSua = [];
+        console.log(chuoiNhap);
+        for (let i = 0; i < chuoiNhap.length; i++) {
+            let cout = chuoiUp.indexOf(chuoiNhap[i]);
+            let cout_2 = chuoiLow.indexOf(chuoiNhap[i]);
+            if (cout !== -1) {
+                chuoiSua.push(chuoiNhap[i]);
+            }
+            else if (cout_2 !== -1) {
+                cout = cout_2;
+                chuoiSua.push(chuoiUp[cout]);
+            }
+
+        }
+        console.log(chuoiSua.join(' '));
+    </script>
+</body>
+
+</html>

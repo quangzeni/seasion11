@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soNhap = prompt("Nhap so bat ky:");
+        let soSua = [];
+        console.log(soNhap);
+        for(let i =0; i<soNhap.length; i++){
+            if(soNhap[i-1]%2===0 && soNhap[i]%2 ===0){
+                soSua.push("-",soNhap[i]);
+            }
+            else{
+                soSua.push(soNhap[i]);
+            }
+        }console.log(soSua.join(' '));
+    </script>
+</body>
+</html>
